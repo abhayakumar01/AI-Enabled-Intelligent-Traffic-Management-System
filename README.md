@@ -1,176 +1,358 @@
-# 🚦 AI-Enabled Intelligent Traffic Management System (ITMS)
+# AI-Enabled Intelligent Traffic Management System
 
-An AI-powered Intelligent Traffic Management System that utilizes **YOLOv8**, **OpenCV**, and **Streamlit** to monitor traffic, detect vehicles in real time, analyze traffic density, and optimize traffic signal timing for efficient and intelligent traffic management.
-
----
-
-## 📖 Overview
-
-Traffic congestion has become one of the biggest challenges in modern cities, causing delays, fuel consumption, and environmental pollution. This project applies Artificial Intelligence and Computer Vision to automate traffic monitoring and dynamically manage traffic signals based on real-time vehicle density.
-
-Using the YOLOv8 object detection model, the system detects and counts vehicles from live video feeds, analyzes traffic conditions, and automatically adjusts signal timing to improve traffic flow. The project also includes emergency vehicle prioritization for faster emergency response.
+A computer vision and AI-based traffic monitoring project designed to detect vehicles, monitor traffic density, detect potential accidents, and prioritize emergency vehicles. The system uses YOLOv8, OpenCV, and Streamlit to process video and present a live dashboard for traffic control and incident monitoring.
 
 ---
 
-## ✨ Key Features
+## 1. Project Overview
 
-- 🚗 Real-Time Vehicle Detection using YOLOv8
-- 📹 Live Traffic Video Processing
-- 🚦 Intelligent Traffic Signal Control
-- 📊 Traffic Density Analysis
-- 🚑 Emergency Vehicle Priority Detection
-- 📈 Interactive Streamlit Dashboard
-- ⚡ Automatic Signal Timing Optimization
-- 🖥️ Real-Time Monitoring Interface
+This project helps automate traffic management by analyzing road footage and identifying key conditions such as:
 
----
+- vehicle counts by type
+- traffic density level
+- accident or stopped-vehicle warning
+- emergency vehicle detection
+- snapshot saving for confirmed incidents
+- Brevo email notifications for confirmed accident alerts
 
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|------------|---------|
-| Python | Application Development |
-| YOLOv8 | Vehicle Detection |
-| OpenCV | Image & Video Processing |
-| Streamlit | Dashboard Interface |
-| NumPy | Numerical Processing |
-| Pandas | Data Processing |
+The app is built as a dashboard-driven system that can process uploaded traffic video and visualize the detected results in real time.
 
 ---
 
-## 📂 Project Structure
+## 2. Features
+
+- Real-time vehicle detection using YOLOv8
+- Traffic density estimation
+- Accident alert and confirmation logic
+- Emergency vehicle priority detection
+- Streamlit-based monitoring dashboard
+- Incident snapshot saving to the event_snapshots folder
+- Optional email notifications through Brevo
+- Model fallback to YOLOv8 base weights if custom accident model is not available
+
+---
+
+## 3. Technologies Used
+
+- Python 3.10+
+- OpenCV
+- Ultralytics YOLOv8
+- Streamlit
+- NumPy
+- Pandas
+- TensorFlow / PyTorch dependency stack via YOLOv8
+- Brevo API for sending email alerts
+
+---
+
+## 4. Project Structure
 
 ```text
 AI-Enabled-Intelligent-Traffic-Management-System/
-│
-├── app.py
-├── main.py
-├── requirements.txt
-├── models/
-├── src/
-├── output/
-├── videos/
-├── images/
 ├── README.md
-└── .gitignore
+├── requirements.txt
+├── main.py
+├── dashboard.py
+├── detector.py
+├── emergency.py
+├── signal_control.py
+├── accident.py
+├── prediction.py
+├── utils.py
+├── shared_data.py
+├── video_processor.py
+├── brevo_alerts.py
+├── train_accident_model.py
+├── accident_dataset.yaml
+├── traffic_data.json
+├── traffic.mp4.mp4
+├── yolov8n.pt
+├── yolov8s.pt
+├── accident_best.pt   # optional custom trained model
+├── event_snapshots/
+├── tests/
+├── video_runs/
+└── .git/
 ```
 
 ---
 
-## ⚙️ System Workflow
+## 5. Requirements
 
-```text
-Traffic Camera / Video
-          │
-          ▼
-OpenCV Frame Processing
-          │
-          ▼
-YOLOv8 Vehicle Detection
-          │
-          ▼
-Vehicle Counting
-          │
-          ▼
-Traffic Density Analysis
-          │
-          ▼
-Signal Timing Decision
-          │
-          ▼
-Emergency Vehicle Detection
-          │
-          ▼
-Traffic Signal Optimization
-          │
-          ▼
-Live Streamlit Dashboard
-```
+Before setup, make sure your computer has:
+
+- Python 3.10 or newer
+- pip installed
+- Git installed
+- A working GPU is optional, but CPU works for basic testing
+- An internet connection to install dependencies
 
 ---
 
-## 🚀 Installation
+## 6. Setup Instructions on a New Computer
 
-Clone the repository:
-
-```bash
-git clone https://github.com/mustafajaved304/AI-Enabled-Intelligent-Traffic-Management-System.git
-```
-
-Navigate to the project directory:
+### Step 1: Clone the project
 
 ```bash
+git clone https://github.com/your-username/AI-Enabled-Intelligent-Traffic-Management-System.git
 cd AI-Enabled-Intelligent-Traffic-Management-System
 ```
 
-Install the required dependencies:
+If you already have the project folder locally, skip the clone step and move to the next one.
+
+### Step 2: Create a virtual environment
+
+On Windows:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+On macOS/Linux:
 
 ```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Step 3: Install dependencies
+
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Run the application:
+If installation fails on a specific machine, you can install the key packages manually:
 
 ```bash
-streamlit run app.py
+pip install ultralytics opencv-python numpy pandas streamlit matplotlib torch tensorflow
+```
+
+### Step 4: Confirm the project runs
+
+From the project root:
+
+```bash
+python -m streamlit run dashboard.py
+```
+
+The dashboard should open in your browser at:
+
+```text
+http://localhost:8501
+```
+
+If the app is already configured locally, it may also be launched from a terminal with:
+
+```bash
+streamlit run dashboard.py
 ```
 
 ---
 
-## 🎯 Project Objectives
+## 7. Running the Application
 
-- Develop an AI-powered traffic management solution.
-- Detect and count vehicles using Computer Vision.
-- Analyze real-time traffic density.
-- Optimize traffic signal timing automatically.
-- Improve emergency vehicle movement.
-- Reduce traffic congestion using Artificial Intelligence.
+### Launch dashboard
 
----
+```bash
+python -m streamlit run dashboard.py
+```
 
-## 🚀 Future Enhancements
+### Upload a video
 
-- Drone-Based Traffic Monitoring
-- Automatic Accident Detection
-- Automatic Number Plate Recognition (ANPR)
-- Cloud-Based Monitoring System
-- Mobile Application
-- Smart City Integration
-- AI-Based Traffic Prediction
-- IoT-Based Traffic Signal Control
+1. Open the dashboard in the browser.
+2. Upload a video file such as mp4, avi, mov, or mkv.
+3. Adjust confidence and accident alert timing settings.
+4. Click Start video processing.
 
----
+The app will:
 
-## 🌍 Applications
-
-- Smart City Infrastructure
-- Urban Traffic Monitoring
-- Highway Traffic Control
-- Intelligent Transportation Systems (ITS)
-- Emergency Response Management
-- Traffic Research and Analytics
+- detect vehicles in frames
+- estimate traffic conditions
+- show accident alerts
+- save incident snapshots when confirmed
+- optionally send emails via Brevo
 
 ---
 
-## 📚 Learning Outcomes
+## 8. Optional: Brevo Email Alerts
 
-This project demonstrates the practical implementation of Artificial Intelligence, Computer Vision, and intelligent decision-making for traffic management. It combines deep learning with real-time image processing to automate traffic analysis and optimize signal control using modern AI techniques.
+To enable email notifications for confirmed accident incidents, set environment variables before starting the dashboard.
+
+### Windows PowerShell
+
+```powershell
+$env:BREVO_API_KEY = "your-api-key"
+$env:BREVO_SENDER_EMAIL = "verified-sender@example.com"
+$env:BREVO_RECIPIENT_EMAIL = "recipient@example.com"
+$env:BREVO_SENDER_NAME = "AI Traffic Management System"
+python -m streamlit run dashboard.py
+```
+
+### macOS/Linux
+
+```bash
+export BREVO_API_KEY="your-api-key"
+export BREVO_SENDER_EMAIL="verified-sender@example.com"
+export BREVO_RECIPIENT_EMAIL="recipient@example.com"
+export BREVO_SENDER_NAME="AI Traffic Management System"
+python -m streamlit run dashboard.py
+```
+
+Important notes:
+
+- The sender email must be verified in Brevo.
+- Use the Brevo API key, not the SMTP key.
+- The API key should be kept in environment variables and not committed to the repository.
 
 ---
 
-## 👨‍💻 Author
+## 9. Accident Model Training
 
-**Mustafa Mehmood Javed**
-GitHub: https://github.com/mustafajaved304
+The project supports a custom accident-detection model. If a trained model is not present, the dashboard falls back to the default YOLOv8 weights.
+
+### Recommended dataset structure
+
+```text
+datasets/accident/
+├── images/
+│   ├── train/
+│   └── val/
+├── labels/
+│   ├── train/
+│   └── val/
+└── data.yaml
+```
+
+### Train the model
+
+```bash
+python train_accident_model.py --epochs 100 --imgsz 960 --batch 8
+```
+
+If your dataset is stored somewhere else:
+
+```bash
+python train_accident_model.py --dataset-root "C:\path\to\datasets\accident" --epochs 100 --imgsz 960 --batch 8
+```
+
+After training, place the best model into the project root as:
+
+```text
+accident_best.pt
+```
+
+The dashboard will use this custom model automatically when it exists.
 
 ---
 
-## 📄 License
+## 10. How the System Works
 
-This project is developed for educational and academic purposes.
+```text
+Video input
+    ↓
+OpenCV frame extraction
+    ↓
+YOLOv8 object detection
+    ↓
+Vehicle counting and classification
+    ↓
+Traffic density analysis
+    ↓
+Emergency vehicle check
+    ↓
+Accident alert and confirmation logic
+    ↓
+Snapshot saving + optional Brevo email
+    ↓
+Streamlit dashboard reporting
+```
 
 ---
 
-## ⭐ Support
+## 11. Troubleshooting
 
-If you found this project useful, please consider giving it a ⭐ on GitHub.
+### Streamlit does not open
+
+- Make sure the virtual environment is activated.
+- Reinstall dependencies: `pip install -r requirements.txt`
+- Use `python -m streamlit run dashboard.py` instead of `streamlit run` if needed.
+
+### Model errors
+
+- Ensure that `yolov8n.pt` or `yolov8s.pt` is present in the project root.
+- If a custom accident model is missing, the app will fall back to the default YOLO model.
+
+### Video does not process
+
+- Check that your uploaded video file is valid.
+- Confirm the file extension is supported.
+- Ensure OpenCV can read the video in your environment.
+
+### Brevo email fails
+
+- Check the API key.
+- Make sure the sender email is verified in Brevo.
+- Ensure the recipient email is valid.
+- Verify that the environment variables are set before starting the app.
+
+---
+
+## 12. Deployment Notes
+
+This project is designed for local testing and monitoring. For a real deployment, you may later add:
+
+- a web server deployment setup
+- persistent storage for snapshots
+- production-ready database logging
+- alert management and dashboard authentication
+- a dedicated camera streaming source instead of uploaded video
+
+---
+
+## 13. Project Goals
+
+This project is useful for:
+
+- smart city traffic monitoring
+- intelligent transportation systems
+- road safety analysis
+- emergency vehicle prioritization
+- AI-based traffic signal decision support
+
+---
+
+## 14. License
+
+This project is intended for educational, research, and demonstration purposes.
+
+---
+
+## 15. Author / Credits
+
+Project developed for AI-driven intelligent transportation and traffic monitoring research.
+
+---
+
+## 16. Quick Start Summary
+
+```bash
+git clone <repo-url>
+cd AI-Enabled-Intelligent-Traffic-Management-System
+python -m venv venv
+# Windows
+.\venv\Scripts\Activate.ps1
+# macOS/Linux
+# source venv/bin/activate
+pip install -r requirements.txt
+python -m streamlit run dashboard.py
+```
+
+Open the app in your browser at:
+
+```text
+http://localhost:8501
+```
+
+This is the simplest way to install and run the project on another computer.

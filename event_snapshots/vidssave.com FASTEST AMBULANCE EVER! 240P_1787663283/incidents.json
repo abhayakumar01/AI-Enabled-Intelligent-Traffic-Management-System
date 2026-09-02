@@ -1,0 +1,56 @@
+[
+  {
+    "frame": 46,
+    "timestamp": 1.5348666666666666,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_46_2.jpg",
+    "track_id": 2
+  },
+  {
+    "frame": 65,
+    "timestamp": 2.168833333333333,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_65_4.jpg",
+    "track_id": 4
+  },
+  {
+    "frame": 118,
+    "timestamp": 3.937266666666667,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_118_5.jpg",
+    "track_id": 5
+  },
+  {
+    "frame": 392,
+    "timestamp": 13.079733333333333,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_392_6.jpg",
+    "track_id": 6
+  },
+  {
+    "frame": 458,
+    "timestamp": 15.281933333333333,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_458_7.jpg",
+    "track_id": 7
+  },
+  {
+    "frame": 620,
+    "timestamp": 20.687333333333335,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_620_8.jpg",
+    "track_id": 8
+  },
+  {
+    "frame": 656,
+    "timestamp": 21.888533333333335,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_656_10.jpg",
+    "track_id": 10
+  },
+  {
+    "frame": 759,
+    "timestamp": 25.325300000000002,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_759_11.jpg",
+    "track_id": 11
+  },
+  {
+    "frame": 809,
+    "timestamp": 26.993633333333335,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave.com FASTEST AMBULANCE EVER! 240P_1787663283\\confirmed_accident_809_12.jpg",
+    "track_id": 12
+  }
+]
