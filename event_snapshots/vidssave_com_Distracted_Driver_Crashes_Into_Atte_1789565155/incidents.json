@@ -1,0 +1,20 @@
+[
+  {
+    "frame": 123,
+    "timestamp": 4.1,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave_com_Distracted_Driver_Crashes_Into_Atte_1789565155\\confirmed_accident_123_detector.jpg",
+    "track_id": -1
+  },
+  {
+    "frame": 208,
+    "timestamp": 6.933333333333334,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave_com_Distracted_Driver_Crashes_Into_Atte_1789565155\\confirmed_accident_208_detector.jpg",
+    "track_id": -1
+  },
+  {
+    "frame": 404,
+    "timestamp": 13.466666666666667,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave_com_Distracted_Driver_Crashes_Into_Atte_1789565155\\confirmed_accident_404_detector.jpg",
+    "track_id": -1
+  }
+]

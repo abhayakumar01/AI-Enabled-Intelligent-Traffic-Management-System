@@ -1,0 +1,20 @@
+[
+  {
+    "frame": 415,
+    "timestamp": 13.833333333333334,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave_com_Road_Safety__What_are_the_causes_of_1789566418\\confirmed_accident_415_40.jpg",
+    "track_id": 40
+  },
+  {
+    "frame": 478,
+    "timestamp": 15.933333333333334,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave_com_Road_Safety__What_are_the_causes_of_1789566418\\confirmed_accident_478_detector.jpg",
+    "track_id": -1
+  },
+  {
+    "frame": 559,
+    "timestamp": 18.633333333333333,
+    "image_path": "C:\\Users\\abhay\\OneDrive\\Documents\\GitHub\\AI-Enabled-Intelligent-Traffic-Management-System\\event_snapshots\\vidssave_com_Road_Safety__What_are_the_causes_of_1789566418\\confirmed_accident_559_66.jpg",
+    "track_id": 66
+  }
+]
